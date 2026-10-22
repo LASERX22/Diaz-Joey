@@ -1,0 +1,139 @@
+:root{
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --primary-color: #0056b3;
+    --border-color: #cccccc;
+    --bg-secundario: #f4f4f4;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg-color:#121212;
+        --text-color: #e0e0e0;
+        --primary-color: #66b2ff;
+        --border-color: #444444;
+        --bg-secundario: #1e1e1e;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+a:focus, button:focus, input:focus, select:focus{
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    background-color: var(--bg-secundario);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.nav a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td{
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+caption{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+fieldset{
+    border: 2px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+legend{
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+input, select{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+button{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.grid-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    }
+
+    .header{ grid-area: header;}
+    .nav { grid-area: nav;}
+    .main {grid-area: main;}
+    .aside {grid-area: aside;}
+    .footer { grid-area: footer; text-align: center;}
+}
