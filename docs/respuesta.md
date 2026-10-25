@@ -1,0 +1,4 @@
+| N.º de hallazgo | Decisión (acepta o refuta) | Justificación con la norma | Evidencia antes y después | Commit |
+|---|---|---|---|---|
+| 1 | Refutar | Requisitos Base 1, segun la observacion de mi compañero no poseo etiquetas `<h2>` dentro de `<main>` o `<header>`, lo cual a mi parecer esta equivocado ya que e ncada `<section>` hago uso de esta etiqueta | [Evidencia](evidencias/evidencia.png) | Ninguno |
+| 2 | Aceptar | Entregables, segun la observacion de mi compañero no segui la estructura del proyecto ordenada por el docente lo cual es correcto | [Antes](evidencias/semanticabase.png)/[Despues](evidencias/evidencia_despues.png) | Commit N°9 |
